@@ -11,6 +11,9 @@
 # In[1]:
 
 
+from herramientas import *
+
+
 class Vehiculo:
     def __init__(self, color, tipo, cilindrada):
         self.color = color
@@ -39,7 +42,7 @@ class Vehiculo:
 
     def Frenar(self, vel):
         self.velocidad -= vel
-    
+
     def Doblar(self, grados):
         self.direccion += grados
 
@@ -83,7 +86,7 @@ class Vehiculo:
 
     def Frenar(self, vel):
         self.velocidad -= vel
-    
+
     def Doblar(self, grados):
         self.direccion += grados
 
@@ -91,7 +94,8 @@ class Vehiculo:
         print('Velocidad:', self.velocidad, '- Dirección:', self.direccion)
 
     def Detalle(self):
-        print('Soy', self.tipo, 'de color', self.color, 'y mi cilindrada es de', self.cilindrada, 'litros')
+        print('Soy', self.tipo, 'de color', self.color,
+              'y mi cilindrada es de', self.cilindrada, 'litros')
 
 
 # In[13]:
@@ -188,9 +192,9 @@ class Herramientas:
         return valor_destino
 
     def factorial(self, numero):
-        if(type(numero) != int):
+        if (type(numero) != int):
             return 'El numero debe ser un entero'
-        if(numero < 0):
+        if (numero < 0):
             return 'El numero debe ser pisitivo'
         if (numero > 1):
             numero = numero * self.factorial(numero - 1)
@@ -214,7 +218,7 @@ h.verifica_primo(7)
 # In[29]:
 
 
-listado = [1,8,2,5,4,8,10,7]
+listado = [1, 8, 2, 5, 4, 8, 10, 7]
 moda, repe = h.valor_modal(listado, True)
 print('El valor modal es', moda, 'y se reptie', repe, 'veces')
 
@@ -249,8 +253,9 @@ class Herramientas:
 
     def conversion_grados(self, origen, destino):
         for i in self.lista:
-            print(i, 'grados', origen, 'son', self.__conversion_grados(i, origen, destino),'grados',destino)
-    
+            print(i, 'grados', origen, 'son', self.__conversion_grados(
+                i, origen, destino), 'grados', destino)
+
     def factorial(self):
         for i in self.lista:
             print('El factorial de ', i, 'es', self.__factorial(i))
@@ -321,9 +326,9 @@ class Herramientas:
         return valor_destino
 
     def __factorial(self, numero):
-        if(type(numero) != int):
+        if (type(numero) != int):
             return 'El numero debe ser un entero'
-        if(numero < 0):
+        if (numero < 0):
             return 'El numero debe ser pisitivo'
         if (numero > 1):
             numero = numero * self.__factorial(numero - 1)
@@ -333,13 +338,13 @@ class Herramientas:
 # In[56]:
 
 
-h = Herramientas([1,1,2,5,8,8,9,11,15,16,16,16,18,20])
+h = Herramientas([1, 1, 2, 5, 8, 8, 9, 11, 15, 16, 16, 16, 18, 20])
 
 
 # In[57]:
 
 
-h.conversion_grados('celsius','farenheit')
+h.conversion_grados('celsius', 'farenheit')
 
 
 # In[58]:
@@ -366,17 +371,13 @@ h.factorial()
 # In[1]:
 
 
-from herramientas import *
-
-
 # In[2]:
 
 
-h2 = Herramientas([1,1,2,3,5,6,8,8])
+h2 = Herramientas([1, 1, 2, 3, 5, 6, 8, 8])
 
 
 # In[3]:
 
 
 h2.verifica_primo()
-

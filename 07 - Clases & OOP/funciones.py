@@ -1,6 +1,6 @@
 
 
-class Herramientas:
+class Funciones:
     def __init__(self, lista_numeros):
         self.lista = lista_numeros
 
